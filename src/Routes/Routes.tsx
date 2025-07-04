@@ -1,8 +1,9 @@
 import { MainLayout } from '@/Layouts/MainLayout'
-import { AddBook } from '@/pages/AddBook/AddBook'
-import { BorrowSummary } from '@/pages/BorrowSummary/BorrowSummary';
-import { Home } from '@/pages/Home/Home'
-import { createBrowserRouter } from 'react-router-dom'
+import { AddBook } from '@/pages/AddBook';
+import { BookList } from '@/pages/BookList';
+
+import { EditBook } from '@/pages/EditBook';
+import { createBrowserRouter } from 'react-router-dom';
 
 export const router = createBrowserRouter([
   {
@@ -11,16 +12,30 @@ export const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Home/>
+        element: <BookList/>
       },
+      
+      // {
+      //   path: "/book/:id",
+      //   element: <BookDetails/>,
+      //   loader: ({params})=> fetch(`BASE_URL/book/${params.id}`),
+      // },
       {
-        path: "/add-book",
+        path: "/create-book",
         element: <AddBook/>
       },
       {
-        path: "/borrow-summary",
-        element: <BorrowSummary/>
+        path: "/edit-book/:id",
+        element: <EditBook/>
       },
+      // {
+      //   path: "/borrow/:bookId",
+      //   element: <BorrowBook/>
+      // },
+      // {
+      //   path: "/borrow-summary",
+      //   element: <BorrowSummary/>
+      // },
     ]
   }
 ]);
