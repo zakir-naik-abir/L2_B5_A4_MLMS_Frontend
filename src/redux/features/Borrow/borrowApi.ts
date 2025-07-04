@@ -12,10 +12,10 @@ export const borrowApi = createApi({
   endpoints: (builder) =>({
     
     borrowBook: builder.mutation<any, { book: string; quantity:number; dueDate: string }>({
-      query: ( borrowData ) =>({
+      query: ( book ) =>({
         url: `/borrow`,
         method: 'POST',
-        body: borrowData,
+        body: book,
       }),
       invalidatesTags: ['Books', 'BorrowSummary'],
     }),
