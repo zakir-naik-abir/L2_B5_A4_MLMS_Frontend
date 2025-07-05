@@ -1,32 +1,68 @@
 Minimal Library Management System - Frontend 📚
+
 This is the frontend for the Minimal Library Management System, a client-side application built with React, TypeScript, and Redux Toolkit Query. It provides a clean, responsive, and user-friendly interface for managing books and borrowing them without any authentication.
-Live Demo: [Your Live Frontend Link]
-Features
-Public Access: All pages and features are publicly accessible without login.
-Book Management (CRUD):
-View All Books: A responsive table displays all books with details like Title, Author, Genre, ISBN, Copies, and Availability.
-Add New Book: A dedicated form to add new books to the library.
-Edit Book: Seamlessly update book information, which reflects instantly in the UI.
-Delete Book: A confirmation dialog ensures accidental deletions are prevented.
-Borrowing System:
-Borrow a Book: A simple form to borrow a book, with validation to ensure the requested quantity does not exceed available copies.
-Availability Logic: A book is automatically marked "Unavailable" if its copy count reaches zero.
-Borrow Summary: A dedicated page showing an aggregated list of all borrowed books, including the total quantity borrowed for each.
-Responsive Design: The UI is fully responsive and works beautifully on mobile, tablet, and desktop screens.
-User-Friendly Interface: Clean and minimalist design with intuitive navigation and clear actions.
-✨ Bonus Features Implemented
-Optimistic UI Updates: UI updates instantly after an action (e.g., add, edit, delete) for a smoother user experience.
-Toast Notifications: Real-time feedback for success or error messages using toast notifications.
-Type-Safe Forms: All forms are built with type safety to reduce runtime errors.
-Technology Stack
-Framework: React + Vite
-Language: TypeScript
-State Management: Redux Toolkit & RTK Query
-Styling: Tailwind CSS
-Linting/Formatting: ESLint & Prettier
-Pages & Routes
-/books – Displays a list of all books.
-/create-book – Form to add a new book.
-/edit-book/:id – Form to update an existing book.
-/borrow/:bookId – Form to borrow a selected book.
-/borrow-summary – Displays an aggregated summary of borrowed books.
+
+Live Demo: [[My Live Frontend Link](https://l2b5a4frontend.vercel.app)], [[My Live Frontend Link]([https://l2b5a4frontend.vercel.app/](https://l2b5a4backend.vercel.app/books))]
+
+
+✨ Key Features:
+
+📖 Full CRUD for Books: Effortlessly Create, Read, Update, and Delete books in the library.
+⚙️ Smart Availability: A book is automatically marked as "Unavailable" when its last copy is borrowed.
+🚀 Seamless Borrowing System: Users can borrow books with a simple form, specifying quantity and a due date.
+📈 Borrow Summary: An aggregated view shows the total number of times each book has been borrowed.
+🎨 Clean & Responsive UI: Built with Tailwind CSS, the interface is minimalist, intuitive, and works flawlessly on all devices.
+🔔 Real-time Feedback: Toast notifications provide instant feedback for user actions (success, error).
+⚡ Optimistic UI Updates: The UI updates instantly for a smooth and fast user experience without waiting for the server response.
+🔒 Type-Safe Codebase: Full TypeScript integration on both frontend and backend ensures robustness and fewer runtime errors.
+
+
+🛠️ Technology Stack:
+
+Layer	Technology
+Frontend	React TypeScript Redux Toolkit RTK Query Tailwind CSS Vite
+Backend	Node.js Express.js TypeScript MongoDB Mongoose
+Dev & Build	ts-node-dev ESLint Prettier
+Deployment	Vercel (Frontend), Render (Backend)
+
+
+API Endpoints:
+All backend endpoints are prefixed with /
+Method	Endpoint	Description	Access
+POST	/create-book	Add a new book	Public
+GET	/books	Get all books (with pagination)	Public
+GET	/book/:id	Get a single book by ID	Public
+PATCH	/edit-book/:id	Update a book's details	Public
+DELETE	/delete/:id	Delete a book	Public
+POST	/borrow	Borrow a specific book	Public
+GET	/borrow-summary	Get aggregated borrow summary	Public
+
+
+🚀 Getting Started
+To run this project locally, follow these steps.
+Prerequisites
+Node.js (v18 or higher)
+npm or yarn
+MongoDB (a local instance or a cloud URI from MongoDB Atlas)
+
+
+1. Backend Setup
+Generated bash
+# Clone the backend repository
+git clone https://github.com/your-username/backend-repo.git
+cd backend
+
+# Install dependencies
+npm install
+
+
+2. Frontend Setup
+Generated bash
+# In a new terminal, clone the frontend repository
+git clone https://github.com/your-username/frontend-repo.git
+cd frontend
+
+# Install dependencies
+npm install
+
+
