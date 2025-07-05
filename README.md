@@ -2,7 +2,8 @@ Minimal Library Management System - Frontend 📚
 
 This is the frontend for the Minimal Library Management System, a client-side application built with React, TypeScript, and Redux Toolkit Query. It provides a clean, responsive, and user-friendly interface for managing books and borrowing them without any authentication.
 
-Live Demo: [[My Live Frontend Link](https://l2b5a4frontend.vercel.app)], [[My Live Frontend Link]([https://l2b5a4frontend.vercel.app/](https://l2b5a4backend.vercel.app/books))]
+Live Demo: [[My Live Frontend Link](https://l2b5a4frontend.vercel.app)],
+[[My Live Frontend Link]([https://l2b5a4frontend.vercel.app/](https://l2b5a4backend.vercel.app/books))]
 
 
 ✨ Key Features:
@@ -38,31 +39,5 @@ POST	/borrow	Borrow a specific book	Public
 GET	/borrow-summary	Get aggregated borrow summary	Public
 
 
-🚀 Getting Started
-To run this project locally, follow these steps.
-Prerequisites
-Node.js (v18 or higher)
-npm or yarn
-MongoDB (a local instance or a cloud URI from MongoDB Atlas)
-
-
-1. Backend Setup
-Generated bash
-# Clone the backend repository
-git clone https://github.com/your-username/backend-repo.git
-cd backend
-
-# Install dependencies
-npm install
-
-
-2. Frontend Setup
-Generated bash
-# In a new terminal, clone the frontend repository
-git clone https://github.com/your-username/frontend-repo.git
-cd frontend
-
-# Install dependencies
-npm install
 
 
