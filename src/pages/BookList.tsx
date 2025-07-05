@@ -29,8 +29,8 @@ export const BookList = () => {
     );
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">
+    <div className="container mx-auto p-4  text-[8px] sm:text-md lg:text-xl">
+      <h1 className="text-[14px] sm:text-3xl font-bold mb-4">
         Total Books Item: {data?.data?.length}
       </h1>
       <div className="overflow-x-auto">
@@ -59,7 +59,7 @@ export const BookList = () => {
                 >
                   {book.available ? "Yes" : "No"}
                 </td>
-                <td className="py-2 px-4 border space-x-2">
+                <td className="py-2 px-4 border space-x-1 space-y-1 grid grid-cols-1 sm:flex">
                   <Link
                     to={`/edit-book/${book._id}`}
                     className="bg-blue-500 text-white px-3 py-1 rounded"

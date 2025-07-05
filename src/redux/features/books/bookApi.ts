@@ -7,6 +7,7 @@ export const booksApi = createApi({
   reducerPath: "booksApi",
   baseQuery: fetchBaseQuery({
     baseUrl: BASE_URL,
+    // baseUrl: import.meta.env.BASE_URL,
   }),
   tagTypes: ["Books"],
   endpoints: (builder) => ({

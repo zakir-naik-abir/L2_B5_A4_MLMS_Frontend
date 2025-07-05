@@ -5,9 +5,9 @@ import { useGetBookByIdQuery } from "@/redux/features/books/bookApi";
 import { useBorrowBookMutation } from "@/redux/features/Borrow/borrowApi";
 import type { BorrowFormData } from "@/types/borrow";
 import { useForm } from "react-hook-form";
-import toast from "react-hot-toast";
 import { ImSpinner11 } from "react-icons/im";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
 export const BorrowBook = () => {
   const { bookId } = useParams<{ bookId: string }>();

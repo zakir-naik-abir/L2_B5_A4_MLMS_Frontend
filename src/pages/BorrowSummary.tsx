@@ -4,6 +4,7 @@ import { useGetBorrowSummaryQuery } from "@/redux/features/Borrow/borrowApi";
 
 export const BorrowSummary = () => {
   const { data, isLoading, isError } = useGetBorrowSummaryQuery();
+  console.log(data);
 
   if (isLoading) return <LoadingSpinner />;
   if (isError)
@@ -13,9 +14,9 @@ export const BorrowSummary = () => {
       </div>
     );
   return (
-    <div className="container mx-auto p-5">
-      <h1 className="text-3xl font-bold mb-4">
-        Total Borrow Summary: {data?.data?.length}
+    <div className="container mx-auto p-5 text-[10px] sm:text-[16px]">
+      <h1 className="text-xl sm:text-3xl font-bold mb-4">
+        Total Borrow Summary: {data?.length}
       </h1>
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border">
@@ -27,7 +28,7 @@ export const BorrowSummary = () => {
             </tr>
           </thead>
           <tbody className="border">
-            {data?.data?.map((item: any) => (
+            {data?.map((item: any) => (
               <tr
                 key={item.isbn}
                 className="text-center *:px-4 *:py-2 *:border"

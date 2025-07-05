@@ -1,19 +1,22 @@
-
-export interface IBorrowBook{
+export interface IBorrowBook {
   _id: string;
   book: string;
   quantity: number;
   dueDate: string;
   BorrowedAt: string;
-};
+}
 
-export interface BorrowSummary{
+export interface BorrowSummary {
   bookTitle: string;
   isbn: string;
   totalQuantityBorrowed: number;
-};
+}
 
-export interface BorrowFormData{
+export interface BorrowFormData {
   quantity: number;
   dueDate: string;
-};
+}
+
+export interface BorrowApiResponse {
+  data: BorrowSummary[];
+}
